@@ -54,3 +54,40 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ********************* Memory ************************
+
+// Stack (Primitive), Heap (nonPrimitive)
+
+/*
+Stack is nothing but a cake pile up one to anoyher,
+ it is a copy of origanal value.
+*/
+let myYoutubeName = "KaranOP_YT"; // output is : {KaranOP_YT}
+let anotherName = myYoutubeName; // output is : {KaranOP_YT}
+
+anotherName = "JavaScript" // chenge vale 
+
+console.log(myYoutubeName);// output is : {KaranOP_YT} it is same as privouse 
+console.log(anotherName); // output is : {JavaScript} but it is change as per we change
+
+
+/*
+Heap is one cup of tea,
+if drink then change quntity in this case email.
+*/
+
+let userOne = {
+    email:"karan@gmail.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne;
+
+
+// changing the value of userTwo but effect the fist one both change
+
+userTwo.email = "xyz@yml.com";
+
+console.log(userOne.email);//output is : {xyz@yml.com}........both change
+console.log(userTwo.email); // output is : {xyz@yml.com}........both change
