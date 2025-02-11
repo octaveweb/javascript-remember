@@ -33,3 +33,6 @@ num1 = num2 = num3 = 2+2;
 console.table([num1,num2,num3]);
 
 
+// link to study
+// https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
