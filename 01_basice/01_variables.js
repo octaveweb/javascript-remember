@@ -5,8 +5,11 @@ accountCity = "Kolkata";
 
 let accountState;
 
-// accountId = 8; // not allowed
-
+// accountId = 8;
+/*not allowed 
+becouse it is a constant variable
+can not be change
+*/
 // console.log(accountId);
 
 accountEmail = "n@gmail.com";
@@ -25,7 +28,7 @@ console.log(accountId);
 console.table([accountId,accountEmail,accountPass,accountCity,accountState]);
 
 
-// known as schop
+// known as block schop
 {
 //problem created by var
 /*
