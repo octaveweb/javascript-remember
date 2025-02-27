@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodes</title>
+  </head>
+  <style>
+    body {
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+    <script>
+      let parent = document.querySelector(".parent");
+      // console.log(parrent);
+      // console.log(parrent.children);
+      // console.log(parrent.children[1].innerHTML);
+
+      for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+      }
+      parent.children[0].style.color = "orange";
+
+      // Moving Parrent to Child
+      console.log(parent.firstElementChild.innerHTML + ` First element`);
+      console.log(parent.lastElementChild.innerHTML + ` Last element`);
+
+      // Child to Parrent
+      const day_1 = document.querySelector(".day");
+      console.log(day_1);
+      console.log(day_1.parentElement);
+      console.log(day_1.nextElementSibling.innerHTML);
+
+      console.log(`NODES:`, parent.childNodes);
+      /*
+        WHAT IS NODES?? 
+            Nodes are a tree structure like in this case 
+        we have parent div inside we have 4 childrens so we say that there are 4 elements inside parent div no when it come to nodes there is content in between. Ex_1 
+
+        - - - - - - Ex_1 - - - - - - 
+  <div class="parent">
+        [......So i am taking about this part......]
+        <div class="day">Monday</div>
+        [......So i am taking about this part......]
+        <div class="day">Tuesday</div>
+        [......So i am taking about this part......]
+        <div class="day">Wednesday</div>
+        [......So i am taking about this part......]
+        <div class="day">Thursday</div>
+        [......So i am taking about this part......]
+    </div>
+         ////////// They all are TextNodes //////////
+        */
+    </script>
+  </body>
+</html>

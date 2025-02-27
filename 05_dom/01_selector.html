@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seclectorc</title>
+  
+    <style>
+        body{
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+   #ext{
+            display: none;
+        }     
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="title-1" class="classHello">Titel Lorem ipsum dolor sit amet. <span id="ext">Extra Text</span></h1>
+        <h2>Lorem, ipsum.</h2>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Sourave is a good !boy; </p>
+    </div>
+
+    <ul>
+        <li class="list"> item - 1 </li>
+        <li class="list"> item - 2 </li>
+        <li class="list"> item - 3 </li>
+        <li class="list"> item - 4 </li>
+    </ul>
+
+    <div id="another-ui"></div>
+</body>
+
+<script>
+    let title_1 = document.getElementById("title-1");
+    console.log(title_1);
+    console.log(title_1.id);
+    console.log(title_1.className);
+    console.log(title_1.getAttribute("id"));
+    console.log(title_1.setAttribute("class", "test"));
+    //it over write the privious class's
+    // console.log(title_1);
+
+    title_1.style.backgroundColor = "green"
+    title_1.style.padding = "15px"
+    title_1.style.borderRadius = "10px"
+
+    console.log(title_1.innerHTML);
+    // Returns all HTML tages inside it 
+    /*{
+    For Example:
+    --------------
+        Titel Lorem ipsum dolor sit amet. <span id="ext">Extra Text</span>
+    }*/
+   
+   console.log(title_1.innerText);
+   // Returns Only that are visiable
+   /*{
+   For Example:
+   --------------
+        Titel Lorem ipsum dolor sit amet.   
+   }*/
+  console.log(title_1.textContent);
+  // Returns All text content inside
+  /*{
+  For Example:
+  --------------
+         Titel Lorem ipsum dolor sit amet. Extra Text
+  }*/
+    
+    let querySelector = document.querySelector("h2");
+    console.log(querySelector);
+    
+    
+    let ul = document.querySelector("ul");
+    console.log(ul);
+    let turnGreen = ul.querySelector("li")
+turnGreen.style.backgroundColor = "green"
+turnGreen.style.padding = "5px"
+turnGreen.innerText = "Chenge Using JS"
+
+   console.log( document.querySelectorAll("li"));
+   // Output:
+
+   /*
+   NodeList(4) [li, li, li, li] // it is not an Array
+   */
+//   let myArr = [1,2,3,4,5,6,7,8,9];
+//   console.log(myArr);
+  
+   const listItem = document.querySelectorAll("li")
+    listItem.forEach((li)=>{
+        li.style.backgroundColor = "green"
+        li.style.margin = "5px";
+
+    })
+    const listClass = document.getElementsByClassName("list")
+    // listClass.forEach((li)=>{
+    //  console.log(li);
+     
+    //  // Not work becouse of No is here ForEach 
+    //     // Throw an Error
+    // })
+const convertedToClassToArr = Array.from(listClass)
+
+console.log(convertedToClassToArr);
+
+convertedToClassToArr.forEach((li)=>{
+    console.log(li);
+    li.style.color = "Orange"
+})
+
+
+
+
+  
+   
+</script>
+</html>
