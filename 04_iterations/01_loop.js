@@ -33,7 +33,6 @@ for (let i = 1; i < 10; i++) {
     }
     console.log(`Value of i is ${i}`);
 }
-    */
 
 for (let i = 1; i < 10; i++) {
     if (i == 5) {
@@ -42,3 +41,26 @@ for (let i = 1; i < 10; i++) {
     }
     console.log(`Value of i is ${i}`);
 }
+*/
+
+// do while / while 
+/*
+let i=0;
+while (i<=10) {
+    console.log(`Value of ${i}`);
+    i = i+2;
+    
+}
+let myArr = ["Superman", "Batman", "Flash"];
+let i = 0;
+while (i < myArr.length) {
+    console.log(`index ${i}: ${myArr[i]}`);
+    i = i+1;
+}
+*/
+
+let score = 1;
+do {
+    console.log(`Score is ${score}`);
+    
+} while (score <=10);
